@@ -1,0 +1,433 @@
+.footer{
+    background-color: #464C55;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 40px;
+
+    &-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 93px;
+
+        &__hr{
+            opacity: 0.2;
+            background: #FFF;
+            border: none;
+            height: 1px;
+            margin-bottom: 46px;
+            display: none;
+        }
+
+        &__info{
+            display: flex;
+            flex-direction: row;
+            gap: 33px;
+            &_section1{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+            }
+            &_section2{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            &_div{
+                display: flex;
+                flex-direction: column;
+
+                &_title{
+                    color: #FFF;
+                    font-family: 'Nunito', sans-serif;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 26px;
+                    margin-bottom: 10px;
+                }
+
+                &_div{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    max-width: 154px;
+                    width: 100%;
+
+                    &_text{
+                        color: #FFF;
+                        font-family: 'Nunito', sans-serif;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 26px;
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+
+        &__store{
+            display: flex;
+            flex-direction: column;
+            gap: 29px;
+
+            &_sites{
+                display: flex;
+                flex-direction: row;
+                gap: 6px;
+                display: none;
+            }
+            &_links{
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+
+                &_a1{
+                    width: 135px;
+                    height: 40px;
+                    background: url(./img/1627298982-trimmy-google-play.png) lightgray 50% / cover no-repeat;
+                    border: none;
+                    border-radius: 5px;
+                }
+                &_a2{
+                    width: 135px;
+                    height: 40px;
+                    background: url(./img/1627298983-trimmy-apple-store.png) lightgray 50% / cover no-repeat;
+                    border-radius: 5px;
+                }
+            }
+            &_contacts{
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+
+                &_number{
+                    color: #FFF;
+                    text-align: right;
+                    font-family: 'Nunito', sans-serif;
+                    font-size: 26px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 26px;
+                    text-decoration: none;
+                }
+                &_text{
+                    color: #FFF;
+                    text-align: right;
+                    font-family: 'Nunito', sans-serif;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    opacity: 0.5;
+                }
+            }
+            &_mail{
+                color: #FFF;
+                text-align: right;
+                font-family: 'Nunito', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                opacity: 0.9;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-location{
+        display: flex;
+        flex-direction: row;
+        gap: 156px;
+        margin-bottom: 40px;
+        &__earn{
+            width: 299px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            &_now{
+                color: #FFF;
+                font-family: 'Nunito', sans-serif;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 26px;
+            }
+            &_lastMonth{
+                color: #FFF;
+                font-family: 'Nunito';
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px; 
+                opacity: 0.7;
+            }
+        }
+        &__pizzerias{
+            width: 299px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            &_all{
+                color: #FFF;
+                font-family: 'Nunito', sans-serif;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 26px;
+            }
+            &_where{
+                color: #FFF;
+                font-family: 'Nunito';
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px; 
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &-hr{
+        opacity: 0.2;
+        background: #FFF;
+        border: none;
+        height: 1px;
+        margin-bottom: 46px;
+    }
+
+    &-rights{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &__logo{
+            display: flex;
+            flex-direction: row;
+            gap: 28px;
+            align-items: center;
+
+            &_logo{
+                width: 180px;
+                height: 22px;
+            }
+
+            &_data{
+                color: #FFF;
+                font-family: 'Nunito', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px;
+                opacity: 0.7;
+            }
+        }
+        &__nav{
+            display: flex;
+            flex-direction: row;
+            gap: 14px;
+            align-items: center;
+
+            &_media1125px{
+                display: flex;
+                flex-direction: row;
+                gap: 14px;
+                align-items: center;
+                display: none;
+                margin-bottom: 30px;
+            }
+
+            &_info{
+                color: #FFF;
+                font-family: 'Nunito', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px; 
+                opacity: 0.7;
+            }
+
+            &_calories{
+                color: #FFF;
+                font-family: 'Nunito', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px; 
+                opacity: 0.9;
+            }
+
+            &_help{
+                color: #FFF;
+                font-family: 'Nunito', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px; 
+                opacity: 0.7;
+            }
+        }
+
+        &__links{
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+            
+            &_div{
+                width: 32px;
+                height: 32px;
+                border-radius: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 6px;
+                background: rgba(255, 255, 255, 0.3);
+
+                &_img{
+
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1125px){
+    .footer{
+        &-hr{
+            margin-bottom: 20px;
+        }
+        &-rights{
+            &__nav{
+                display: none;
+                &_media1125px{
+                    display: flex;
+                }
+            }
+        }
+
+        &-info{
+            margin-bottom: 50px;
+
+            &__info{
+                &_section1{
+                    flex-direction: column;
+                }
+                &_section2{
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:720px){
+    .footer{
+        &-info{
+            &__store{
+                &_links{
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-content: flex-end;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:658px){
+    .footer{
+        &-info{
+            flex-direction: column;
+
+            &__hr{
+                display: block;
+                margin: 20px 0;
+            }
+
+            &__store{
+                align-content: flex-start;
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+                gap: 20px;
+
+                &_sites{
+                    display: flex;
+                }
+                &_mail{
+                    display: flex;
+                }
+
+                &_links{
+                    flex-direction: row;
+                }
+                &_contacts{
+                    display: none;
+                }
+            }
+        }
+        &-location{
+            gap: 50px;
+            &__earn{
+                width: 202px;
+            }
+        }
+        &-rights{
+            &__links{
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width:595px){
+    .footer{
+        padding: 30px 0;
+        &-info{
+            margin-bottom: 20px;
+            &__info{
+                &_div{
+                    &_title{
+                        font-size: 16px;
+                    }
+                    &_div{
+                        &_text{
+                            font-size: 16px;
+                        }
+                    }
+                }
+                
+            }
+        }
+        &-location{
+            display: none;
+        }
+        &-rights{
+            &__nav{
+                &_media1125px{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:320px){
+    .footer{
+        padding: 20px 0;
+        &-info{
+            &__info{
+                flex-direction: column;
+                gap: 30px;
+                &_section1{
+                    gap: 30px;
+                }
+                &_section2{
+                    gap: 30px;
+                }
+            }
+        }
+    }
+}

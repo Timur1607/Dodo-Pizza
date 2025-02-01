@@ -1,0 +1,124 @@
+.basket_630px{
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(180deg, #FF6A0A 0%, #FD5608 100%);
+    filter: drop-shadow(0px 7px 25px rgba(0, 0, 0, 0.15));
+    border-radius: 50%;
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    &_img{
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    &_div{
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        background-color: #FFF;
+        border: 1px solid #FF6409;
+        border-radius: 50%;
+        top: 0;
+        left: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &_text{
+            color: #FF6409;
+            text-align: center;
+            font-family: 'Nunito', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}
+
+.deleteProduct{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+.basicProduct{
+    cursor: pointer;
+}
+.addProduct{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-top-right-radius: 1000px;
+    border-bottom-right-radius: 1000px;
+    cursor: pointer;
+}
+.amount{
+    color: var(--Gray-dark, #73798C);
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.elementPlus{
+    stroke-width: 2px;
+    stroke: var(--Gray-dark, #73798C);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+}
+.elementMinus{
+    stroke-width: 2px;
+    stroke: var(--Gray-dark, #73798C);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-75%);
+}
+.listener{
+    display: none;
+    flex-direction: row;
+    gap: 20px;
+    border-radius: 1000px;
+    background: var(--Gray-corporate, #F3F3F7);
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0;
+    border: none;
+    transition: 0.4s;
+    align-items: center;
+}
+
+.basketMain{
+    background-color: #FF6409;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 250px;
+    opacity: 0;
+    transition: 0.4s;
+
+}
+
+@media screen and (max-width:400px){
+    .addProduct{
+        height: 33px;
+        width: 30px;
+    }
+    .deleteProduct{
+        height: 33px;
+        width: 30px;
+    }
+}

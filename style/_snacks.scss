@@ -1,0 +1,207 @@
+.snacks{
+    margin-bottom: 70px;
+
+    &__hr{
+        width: 100%;
+        height: 1px;
+        border: none;
+        background-color: #F3F3F7;;
+    }
+
+    &__title{
+        color: #000;
+        font-family: 'Nunito', sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 40px;
+    }
+
+    &__articles{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        // justify-items: center;
+        gap: 20px;
+        row-gap: 60px;
+        justify-items: center;
+    }
+
+    &__article{
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        height: 425px;
+        padding-right: 20px;
+
+        &_picture{
+            width: 220px;
+            height: 220px;
+            margin-bottom: 5px;
+            margin-left: 15px;
+        }
+        &_info{
+            height: 200px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            &_name{
+                color: #000;
+                font-family: 'Nunito', sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 10px;
+            }
+            &_composition{
+                color: var(--Gray-dark, #73798C);
+                font-family: 'Nunito', sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                // margin-bottom: 11px;
+                // height: 95px;
+            }
+            &_price{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: auto;
+                &_price{
+                    color: #000;
+                    font-family: 'Nunito', sans-serif;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+
+                &_button{
+                    color: var(--Orange-dark, #D15700);
+                    text-align: center;
+                    font-family: 'Nunito', sans-serif;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    padding: 9px 28px;
+                    border-radius: 1000px;
+                    background: var(--Orange-light, #FFF0E6);
+                    border: none;
+                    transition: 0.4s;
+
+                    &_create{
+                        color: #FFF;
+                        text-align: center;
+                        font-family: 'Nunito', sans-serif;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        padding: 9px 28px;
+                        border-radius: 1000px;
+                        background: #F96900;
+                        border: none;
+                        transition: 0.4s;
+
+                        &:hover{
+                            background: #ED5D08;
+                        }
+                    }
+
+                    &:hover{
+                        background: #FFD0B2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:630px){
+    .snacks{
+        margin-bottom: 50px;
+        &__title{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width:511px){
+    .snacks{
+        margin-bottom: 30px;
+        &__title{
+            margin-bottom: 20px;
+        }
+
+        &__articles{
+            grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+            gap: 0;
+            justify-items: center;
+        }
+        &__article{
+            height: max-content;
+            max-width: 400px;
+            width: 100%;
+            flex-direction: row;
+            padding: 16px 10px 16px 0;
+            &_info{
+                height: max-content;
+
+                &_price{
+                    margin-top: 8px;
+                }
+                &_name{
+                    margin-bottom: 4px;
+                }
+            }
+
+            &_picture{
+                width: 150px;
+                height: 150px;
+                margin: 0 7px 0 0;
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width:400px){
+    .snacks{
+        &__article{
+            &_picture{
+                width: 115px;
+                height: 115px;
+            }
+
+            &_info{
+                &_name{
+                    font-size: 18px;
+                    margin-bottom: 4px;
+                }
+                &_composition{
+                    font-size: 12px;
+                    margin-bottom: 8px;
+                    height: max-content;
+                }
+                &_price{
+                    &_price{
+                        font-size: 14px;
+                    }
+                    &_button{
+                        font-size: 14px;
+                        padding: 7px 20px;
+
+                        &_create{
+                            font-size: 14px;
+                            padding: 7px 20px; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
