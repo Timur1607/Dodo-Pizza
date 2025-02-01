@@ -70,7 +70,7 @@ for(let el of data.combo){
             <p class="combo__article_info_composition">${el.description}</p>
             <div class="combo__article_info_price">
                 <p class="combo__article_info_price_price" style="${innerWidth <= 330 ? 'display: none' : ''}">от ${el["price"]} ₽</p>
-                <button class="combo__article_info_price_button_create">${innerWidth <= 330 ? `${el["price"]} ₽`: 'Собрать'}</button>
+                <button onclick="event.stopPropagation()" class="combo__article_info_price_button_create">${innerWidth <= 330 ? `${el["price"]} ₽`: 'Собрать'}</button>
             </div>
         </div>
     `
@@ -101,9 +101,9 @@ for(let el of data.snacks){
             </div>
             <div class="snacks__article_info_price">
                 <p class="snacks__article_info_price_price" style="${innerWidth <= 330 ? 'display: none' : ''}">${el["price"]} ₽</p>
-                <button class="snacks__article_info_price_button basicProduct" style="${el.assembly === true ? 'display: none' : ''}">${innerWidth <= 330 ? `${el["price"]} ₽`: 'В корзину'}</button>
+                <button onclick="event.stopPropagation()" class="snacks__article_info_price_button basicProduct" style="${el.assembly === true ? 'display: none' : ''}">${innerWidth <= 330 ? `${el["price"]} ₽`: 'В корзину'}</button>
                 <div class="listener">
-                    <div class="deleteProduct">
+                    <div onclick="event.stopPropagation()" class="deleteProduct">
                         <div class="elementMinus">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
                                 <path d="M9 1L1 1" stroke="#73798C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -111,7 +111,7 @@ for(let el of data.snacks){
                         </div>
                     </div>
                     <p class="amount">0</p>
-                    <div class="addProduct">
+                    <div onclick="event.stopPropagation()" class="addProduct">
                         <div class="elementPlus">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
                                 <path d="M5 1V9M9 5L1 5" stroke="#73798C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -148,9 +148,9 @@ for(let el of data.desserts){
             </div>
             <div class="desserts__article_info_price">
                 <p class="desserts__article_info_price_price" style="${innerWidth <= 330 ? 'display: none' : ''}">${el["price"]} ₽</p>
-                <button class="desserts__article_info_price_button basicProduct" style="${el.assembly === true ? 'display: none' : ''}">${innerWidth <= 330 ? `${el["price"]} ₽`: 'В корзину'}</button>
+                <button onclick="event.stopPropagation()" class="desserts__article_info_price_button basicProduct" style="${el.assembly === true ? 'display: none' : ''}">${innerWidth <= 330 ? `${el["price"]} ₽`: 'В корзину'}</button>
                 <div class="listener">
-                    <div class="deleteProduct">
+                    <div onclick="event.stopPropagation()" class="deleteProduct">
                         <div class="elementMinus">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
                                 <path d="M9 1L1 1" stroke="#73798C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -158,7 +158,7 @@ for(let el of data.desserts){
                         </div>
                     </div>
                     <p class="amount">0</p>
-                    <div class="addProduct">
+                    <div onclick="event.stopPropagation()" class="addProduct">
                         <div class="elementPlus">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
                                 <path d="M5 1V9M9 5L1 5" stroke="#73798C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -195,9 +195,9 @@ for(let el of data.drinks){
             </div>
             <div class="drinks__article_info_price">
                 <p class="drinks__article_info_price_price" style="${innerWidth <= 330 ? 'display: none' : ''}">${el["price"]} ₽</p>
-                <button class="drinks__article_info_price_button basicProduct" style="${el.assembly === true ? 'display: none' : ''}">${innerWidth <= 330 ? `${el["price"]} ₽`: 'В корзину'}</button>
+                <button onclick="event.stopPropagation()" class="drinks__article_info_price_button basicProduct" style="${el.assembly === true ? 'display: none' : ''}">${innerWidth <= 330 ? `${el["price"]} ₽`: 'В корзину'}</button>
                 <div class="listener">
-                    <div class="deleteProduct">
+                    <div class="deleteProduct" onclick="event.stopPropagation()">
                         <div class="elementMinus">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
                                 <path d="M9 1L1 1" stroke="#73798C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -205,7 +205,7 @@ for(let el of data.drinks){
                         </div>
                     </div>
                     <p class="amount">0</p>
-                    <div class="addProduct">
+                    <div class="addProduct" onclick="event.stopPropagation()">
                         <div class="elementPlus">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
                                 <path d="M5 1V9M9 5L1 5" stroke="#73798C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -228,7 +228,6 @@ let addAmount = (el) => {
     console.log("добавляю");
     
     ++el.parentElement.children[2].children[1].textContent
-    console.log(el.parentElement.children[2].children[1].textContent);
 
     for(let i = 0; i < arr.length; i++){ // хранилище
         if(el.parentElement.parentElement.children[0].children[0].textContent === arr[i].product ){
@@ -257,6 +256,9 @@ let deleteAmount = (el) => {
         if(arr[i].amount <= 0){
             let del = arr.splice(i, 1)
             el.parentElement.children[2].children[1].textContent = null
+            // el.parentElement.children[2].children[0].removeEventListener()
+            // el.parentElement.children[2].children[2].removeEventListener()
+            
             console.log('удалил');
             
         }
@@ -282,54 +284,56 @@ if(window.innerWidth <= 630){
     amount = document.querySelector('.basket_630px_div_text')
 }
 let addNewProduct = (el, login) => { //добавление нового продукта
-        console.log('добавил новый продукт');
-        el.parentElement.children[2].style.display = 'flex'
-        el.style.display = 'none'
+    // event.stopPropagation();
+    // чтобы не открывалось окно корзины
+
+    console.log('добавил новый продукт');
+    el.parentElement.children[2].style.display = 'flex'
+    el.style.display = 'none'
         
-        //событие на удаление кол-во товара
-        el.parentElement.children[2].children[0].addEventListener('click', () => deleteAmount(el))
+    //событие на удаление кол-во товара
+    el.parentElement.children[2].children[0].addEventListener('click', () => deleteAmount(el))
 
-        //событие на добавление кол-во товара
-        el.parentElement.children[2].children[2].addEventListener('click', () =>  addAmount(el))
+    //событие на добавление кол-во товара
+    el.parentElement.children[2].children[2].addEventListener('click', () =>  addAmount(el))
 
+    if(window.innerWidth <= 630){
+        basket.style.display = 'block'
+        amount.textContent = arr.length
+        
+    } else{
+        basket.children[1].style.display = 'block'
+        basket.children[2].style.display = 'block'
+    }
+
+        
+    if(login === true){//<-----------для local storage----------->
         if(window.innerWidth <= 630){
-            basket.style.display = 'block'
             amount.textContent = arr.length
+            console.log(basket.children[1].children.textContent);
             
         } else{
-            basket.children[1].style.display = 'block'
-            basket.children[2].style.display = 'block'
+            basket.children[2].textContent = arr.length 
         }
-
-        
-        if(login === true){//<-----------для local storage----------->
-            if(window.innerWidth <= 630){
-                amount.textContent = arr.length
-                console.log(basket.children[1].children.textContent);
-                
-            } else{
-                basket.children[2].textContent = arr.length 
-            }
             
-            for(let i = 0; i < arr.length; i++){
-                if(arr[i].product === el.parentElement.parentElement.children[0].children[0].textContent){
-                    el.parentElement.children[2].children[1].textContent = arr[i].amount  
-                }
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i].product === el.parentElement.parentElement.children[0].children[0].textContent){
+                el.parentElement.children[2].children[1].textContent = arr[i].amount  
             }
+        }
+    } else{
+        el.parentElement.children[2].children[1].textContent = '1'
+        if(window.innerWidth <= 630){
+            amount.textContent = arr.length +1
         } else{
-            el.parentElement.children[2].children[1].textContent = '1'
-            if(window.innerWidth <= 630){
-                amount.textContent = arr.length +1
-            } else{
-                basket.children[2].textContent = arr.length +1
-            }
+            basket.children[2].textContent = arr.length +1
         }
+    }
 
-        if(login === false){
-            arr.push({'product': el.parentElement.parentElement.children[0].children[0].textContent, "amount": 1})
-            localStorage.setItem("DodoPizza", JSON.stringify(arr))
-        }
-       
+    if(login === false){
+        arr.push({'product': el.parentElement.parentElement.children[0].children[0].textContent, "amount": 1})
+        localStorage.setItem("DodoPizza", JSON.stringify(arr))
+    }
 }
 
 for(let el of basicProduct){
@@ -338,13 +342,43 @@ for(let el of basicProduct){
 
 //<-----------------------------------------------------------ВЗАИМОДЕЙСТВИЯ С КОРЗИНОЙ------------------------------------------------->
 let basketMain = document.querySelector(".basketMain")
-basket.addEventListener('click', () => {
-    basketMain.style.opasity = '1'
-    basketMain.style.setProperty('z-index', '20')
-    // console.log(basket.parentElement.parentElement.parentElement.style.display = 'none');
-    
-});
+let closebasketMain = document.querySelector('.closeBasketMain')
+let basketMainImg = document.querySelector('.basketMain__window_img')
+let basketMainName = document.querySelector('.basketMain__window_content_info_name')
+let basketMainAmount = document.querySelector('.basketMain__window_content_info_amount')
+let basketMainDesc = document.querySelector('.basketMain__window_content_info_desc')
+let basketMainButton = document.querySelector('.basketMain__window_content_button')
 
+let closeTheBasketMain = () => {
+    basketMain.style.opacity = '0'
+    basketMain.style.setProperty('z-index', '-1')
+}
+closebasketMain.addEventListener('click', () => closeTheBasketMain())
+
+let openBasketMain = (el) => {
+    basketMain.style.opacity = '1'
+    basketMain.style.setProperty('z-index', '20')
+    basketMainImg.src = el.children[0].src
+    basketMainName.textContent = el.children[1].children[0].children[0].textContent
+    basketMainAmount.textContent = '1 шт'
+    basketMainDesc.textContent = el.children[1].children[0].children[1].textContent
+    basketMainButton.textContent = `В корзину за ${el.children[1].children[1].children[0].textContent}`
+    
+    basketMainButton.addEventListener('click', () => {
+        closeTheBasketMain()
+        addNewProduct(el.children[1].children[1].children[1], false)
+    })
+}
+
+let articles = document.querySelectorAll('article')
+for(let el of articles){
+    
+    if(el.getAttribute('class') === 'pizza__article'){
+        
+    } else{
+        el.addEventListener('click', () => openBasketMain(el))
+    }
+}
 
 //<-----------------------------------------------------------------ХРАНИЛИЩЕ------------------------------------------------------------>
 if(localStorage.getItem('DodoPizza') !== null){
@@ -359,8 +393,3 @@ if(localStorage.getItem('DodoPizza') !== null){
         }
     }
 }
-
-// let array = [1, 2, 3, 4, 5]
-// let del = array.splice(2,1)
-
-// console.log(array);

@@ -25,6 +25,7 @@
         gap: 20px;
         row-gap: 60px;
         justify-items: center;
+        cursor: pointer;
     }
 
     &__article{
@@ -39,6 +40,11 @@
             height: 220px;
             margin-bottom: 5px;
             margin-left: 15px;
+            transition: 0.2s;
+            &:hover{
+                margin-top: 5px;
+                margin-bottom: 0;
+            }
         }
         &_info{
             height: 200px;
