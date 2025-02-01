@@ -1,12 +1,12 @@
 export const data = {
     'news': [
         {
-            'img': './do-do-pizzas-img/cezar/cezar-traditional-big.jpeg',
+            'img': './pizzas-img/cezar/cezar-traditional-big.jpeg',
             'name': 'Цезарь',
             'price': 445,
         },
         {
-            'img': './do-do-pizzas-img/tender-salmon/tender-salomon-traditional-large.jpeg',
+            'img': './pizzas-img/tender-salmon/tender-salomon-traditional-large.jpeg',
             'name': 'Нежный лосось',
             'price': 495,
         },
@@ -16,17 +16,17 @@ export const data = {
             'price': 899,
         },
         {
-            'img': './do-do-pizzas-img/carbonara/carbonara-traditional-medium.jpeg',
+            'img': './pizzas-img/carbonara/carbonara-traditional-medium.jpeg',
             'name': 'Карбонара',
             'price': 395,
         },
         {
-            'img': './do-do-pizzas-img/carbonara/carbonara-traditional-medium.jpeg',
+            'img': './pizzas-img/carbonara/carbonara-traditional-medium.jpeg',
             'name': 'Карбонара',
             'price': 395,
         },
         {
-            'img': './do-do-pizzas-img/carbonara/carbonara-traditional-medium.jpeg',
+            'img': './pizzas-img/carbonara/carbonara-traditional-medium.jpeg',
             'name': 'Карбонара',
             'price': 395,
         },
@@ -65,7 +65,7 @@ export const data = {
             "minimal-price": 625,
             "medium-price": 925,
             "big-price": 1045,
-            "img": 'do-do-pizzas-img/cheesy-cheddar/cheesy-chadder-middle-traditional.jpeg',
+            "img": 'pizzas-img/cheesy-cheddar/cheesy-chadder-middle-traditional.jpeg',
         },
         {
             "name": "Цыпленок блю чиз",
@@ -98,7 +98,7 @@ export const data = {
             "medium-price": 545,
             "big-price": 665,
             "img": './img/pizza/pepperoniFresh.png',
-        }
+        },
     ],
 
     'combo': [

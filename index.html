@@ -9,20 +9,20 @@
     <script src="./script.js" type="module" defer></script>
 </head>
 <body>
-    <section class="basketMain">
+    <section class="modalMain">
         <div class="container container-window">
-            <div class="basketMain__window">
-                <img class="basketMain__window_img" src="./img/snacks/Dodster.png" alt="">
-                <div class="basketMain__window_content">
-                    <div class="basketMain__window_content_info">
-                        <p class="basketMain__window_content_info_name">Рулетики с ананасами + Рулетики с брусникой, 16 шт</p>
-                        <p class="basketMain__window_content_info_amount">16 шт</p>
-                        <p class="basketMain__window_content_info_desc">Микс рулетиков со сгущенным молоком: 8 штук с ананасом и корицей, 8 штук с брусникой</p>
+            <div class="modalMain__window">
+                <img class="modalMain__window_img" src="./img/snacks/Dodster.png" alt="">
+                <div class="modalMain__window_content">
+                    <div class="modalMain__window_content_info">
+                        <p class="modalMain__window_content_info_name"></p>
+                        <p class="modalMain__window_content_info_amount"></p>
+                        <p class="modalMain__window_content_info_desc"></p>
                     </div>
-                    <button class="basketMain__window_content_button">Добавить в корзину за 650 p</button>
+                    <button class="modalMain__window_content_button"></button>
                 </div>
             </div>
-            <img class="closeBasketMain" src="./img/all/close.svg" alt="">
+            <img class="closemodalMain" src="./img/all/close.svg" alt="">
         </div>
     </section>
     <header class="header">
@@ -69,6 +69,11 @@
                         <p>Корзина</p>
                         <span class="header__main_nav_button_span"></span>
                         <p class="header__main_nav_button_amount">1</p>
+                        <div class="emptyBasket">
+                            <img class="emptyBasket__img" src="./img/sites/emptyBasket.png" alt="">
+                            <p class="emptyBasket__text1">Ой, пусто!</p>
+                            <p class="emptyBasket__text2">Мы всегда доставляем бесплатно, но сумма заказа должна быть от 495 ₽</p>
+                        </div>
                     </button>
                 </div>
             </div>
@@ -247,5 +252,20 @@
             <p class="basket_630px_div_text"></p>
         </div>
     </div>
+    <section class="basket">
+        <div class="container">
+            <header class="basket-header">
+                <div class="basket-header__title">
+                    <img class="basket-header__title_img" src="./PizzaIcon.svg" alt="логотип пиццерии Dodo Pizza">
+                    <div class="basket-header__title_text">
+                        <img class="basket-header__title_text_img" src="./PizzaText.svg" alt="название пиццерии додо пицца"></img>
+                        <p class="basket-header__title_text_text">Сеть пиццерий №1 в России</p>
+                    </div>
+                </div>
+            </header>
+            
+        </div>
+        <hr class="basket-hr">
+    </section>
 </body>
 </html>

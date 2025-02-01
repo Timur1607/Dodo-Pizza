@@ -279,11 +279,16 @@ let deleteAmount = (el) => {
 let basicProduct = document.querySelectorAll('.basicProduct')
 let basket = document.querySelector('.header__main_nav_button')
 let amount = document.querySelector('.header__main_nav_button_amount')
+let basketWindow = document.querySelector('.basket')
 if(window.innerWidth <= 630){
     basket = document.querySelector('.basket_630px')
     amount = document.querySelector('.basket_630px_div_text')
 }
-let addNewProduct = (el, login) => { //добавление нового продукта
+basket.addEventListener('click', () => {
+    basketWindow.style.top = '0'
+})
+
+let addNewProduct = (el, login) => { //------------------------добавление нового продукта--------------------------->
     // event.stopPropagation();
     // чтобы не открывалось окно корзины
 
@@ -340,32 +345,32 @@ for(let el of basicProduct){
     el.addEventListener('click', () => addNewProduct(el, false) )
 }
 
-//<-----------------------------------------------------------ВЗАИМОДЕЙСТВИЯ С КОРЗИНОЙ------------------------------------------------->
-let basketMain = document.querySelector(".basketMain")
-let closebasketMain = document.querySelector('.closeBasketMain')
-let basketMainImg = document.querySelector('.basketMain__window_img')
-let basketMainName = document.querySelector('.basketMain__window_content_info_name')
-let basketMainAmount = document.querySelector('.basketMain__window_content_info_amount')
-let basketMainDesc = document.querySelector('.basketMain__window_content_info_desc')
-let basketMainButton = document.querySelector('.basketMain__window_content_button')
+//<-----------------------------------------------------------МОДАЛЬНОЕ ОКНО------------------------------------------------->
+let modalMain = document.querySelector(".modalMain")
+let closemodalMain = document.querySelector('.closemodalMain')
+let modalMainImg = document.querySelector('.modalMain__window_img')
+let modalMainName = document.querySelector('.modalMain__window_content_info_name')
+let modalMainAmount = document.querySelector('.modalMain__window_content_info_amount')
+let modalMainDesc = document.querySelector('.modalMain__window_content_info_desc')
+let modalMainButton = document.querySelector('.modalMain__window_content_button')
 
-let closeTheBasketMain = () => {
-    basketMain.style.opacity = '0'
-    basketMain.style.setProperty('z-index', '-1')
+let closeTheModalMain = () => {
+    modalMain.style.opacity = '0'
+    modalMain.style.setProperty('z-index', '-1')
 }
-closebasketMain.addEventListener('click', () => closeTheBasketMain())
+closemodalMain.addEventListener('click', () => closeTheModalMain())
 
-let openBasketMain = (el) => {
-    basketMain.style.opacity = '1'
-    basketMain.style.setProperty('z-index', '20')
-    basketMainImg.src = el.children[0].src
-    basketMainName.textContent = el.children[1].children[0].children[0].textContent
-    basketMainAmount.textContent = '1 шт'
-    basketMainDesc.textContent = el.children[1].children[0].children[1].textContent
-    basketMainButton.textContent = `В корзину за ${el.children[1].children[1].children[0].textContent}`
+let openModalMain = (el) => {
+    modalMain.style.opacity = '1'
+    modalMain.style.setProperty('z-index', '20')
+    modalMainImg.src = el.children[0].src
+    modalMainName.textContent = el.children[1].children[0].children[0].textContent
+    modalMainAmount.textContent = '1 шт'
+    modalMainDesc.textContent = el.children[1].children[0].children[1].textContent
+    modalMainButton.textContent = `В корзину за ${el.children[1].children[1].children[0].textContent}`
     
-    basketMainButton.addEventListener('click', () => {
-        closeTheBasketMain()
+    modalMainButton.addEventListener('click', () => {
+        closeTheModalMain()
         addNewProduct(el.children[1].children[1].children[1], false)
     })
 }
@@ -376,7 +381,7 @@ for(let el of articles){
     if(el.getAttribute('class') === 'pizza__article'){
         
     } else{
-        el.addEventListener('click', () => openBasketMain(el))
+        el.addEventListener('click', () => openModalMain(el))
     }
 }
 
