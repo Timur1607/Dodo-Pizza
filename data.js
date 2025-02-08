@@ -232,4 +232,22 @@ export const data = {
             'img': "./img/drinks/Coca-Cola Vanilla.png",
         },
     ],
+
+    'addition':[
+        {
+            'img': './img/addition/milkshake.png',
+            'desc': 'Молочный коктейль с печеньем Oreo',
+            'price': 175,
+        },
+        {
+            'img': 'img/addition/rolls with lingonberries.png',
+            'desc': 'Рулетики с брусникой',
+            'price': 195,
+        },
+        {
+            'img': 'img/addition/potatoes in the oven.png',
+            'desc': 'Картофель из печи',
+            'price': 175,
+        },
+    ],
 }

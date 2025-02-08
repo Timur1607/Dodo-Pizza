@@ -71,6 +71,7 @@
             flex-direction: row;
             justify-content: space-between;
             padding: 10px 0 10px 0;
+            position: relative;
 
             &_nav{
                 max-width: 467px;
@@ -117,6 +118,7 @@
                 flex-direction: row;
                 cursor: pointer;
                 position: relative;
+                text-decoration: none;
 
                 &_span{
                     display: none;

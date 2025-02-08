@@ -90,6 +90,7 @@ for(let el of data.snacks){
     let snacksHr = document.createElement('hr')
     let snacksArticle = document.createElement('article')
     snacksArticle.classList.add('snacks__article')
+    snacksArticle.id = 'basicProduct'
     snacksHr.classList.add('snacks__hr')
 
     snacksArticle.innerHTML = `
@@ -137,6 +138,7 @@ for(let el of data.desserts){
     let dessertsHr = document.createElement('hr')
     let dessertsArticle = document.createElement('article')
     dessertsArticle.classList.add('desserts__article')
+    dessertsArticle.id = 'basicProduct'
     dessertsHr.classList.add('desserts__hr')
 
     dessertsArticle.innerHTML = `
@@ -184,6 +186,7 @@ for(let el of data.drinks){
     let drinksHr = document.createElement('hr')
     let drinksArticle = document.createElement('article')
     drinksArticle.classList.add('drinks__article')
+    drinksArticle.id = 'basicProduct'
     drinksHr.classList.add('drinks__hr')
 
     drinksArticle.innerHTML = `
@@ -280,13 +283,36 @@ let basicProduct = document.querySelectorAll('.basicProduct')
 let basket = document.querySelector('.header__main_nav_button')
 let amount = document.querySelector('.header__main_nav_button_amount')
 let basketWindow = document.querySelector('.basket')
+let closeBasket = document.querySelector('.basket-main-result__buttons_back')
+let emptyBasket = document.querySelector('.emptyBasket')
+if(window.innerWidth <= 600){
+    closeBasket = document.querySelector('.basket-back__600px')
+}
 if(window.innerWidth <= 630){
     basket = document.querySelector('.basket_630px')
     amount = document.querySelector('.basket_630px_div_text')
 }
-basket.addEventListener('click', () => {
-    basketWindow.style.top = '0'
+
+basket.addEventListener('click', (event) => {
+    if(arr.length === 0){
+        event.preventDefault()
+        emptyBasket.style.visibility = 'visible'
+        emptyBasket.style.opacity = '1'
+        window.setTimeout(() => {
+            emptyBasket.style.visibility = 'hidden'
+            emptyBasket.style.opacity = '0'
+        }, 4000)
+        
+    }
 })
+let basketdel = document.querySelectorAll('.basket__delete')
+if(window.innerWidth <= 600){
+    for(let el of basketdel){
+        el.style.display = 'none'
+    }
+}
+
+
 
 let addNewProduct = (el, login) => { //------------------------добавление нового продукта--------------------------->
     // event.stopPropagation();
@@ -336,7 +362,7 @@ let addNewProduct = (el, login) => { //------------------------добавлен�
     }
 
     if(login === false){
-        arr.push({'product': el.parentElement.parentElement.children[0].children[0].textContent, "amount": 1})
+        arr.push({"product": el.parentElement.parentElement.children[0].children[0].textContent,"desc": el.parentElement.parentElement.children[0].children[1].textContent , "img": el.parentElement.parentElement.parentElement.children[0].src , "amount": 1, "price": el.parentElement.children[0].textContent.split(' ')[0]})
         localStorage.setItem("DodoPizza", JSON.stringify(arr))
     }
 }
@@ -360,7 +386,7 @@ let closeTheModalMain = () => {
 }
 closemodalMain.addEventListener('click', () => closeTheModalMain())
 
-let openModalMain = (el) => {
+let openModalMainForBasic = (el) => {
     modalMain.style.opacity = '1'
     modalMain.style.setProperty('z-index', '20')
     modalMainImg.src = el.children[0].src
@@ -371,17 +397,27 @@ let openModalMain = (el) => {
     
     modalMainButton.addEventListener('click', () => {
         closeTheModalMain()
-        addNewProduct(el.children[1].children[1].children[1], false)
+        let check = null
+        for(let el of arr){ // есть ли такой товар в Local storage
+            if(el.product === modalMainName.textContent){
+                check = true
+            }
+        }
+        if(check === true){
+            addAmount(el.children[1].children[1].children[2])
+        } else{
+            addNewProduct(el.children[1].children[1].children[1], false)
+        }
     })
 }
 
 let articles = document.querySelectorAll('article')
 for(let el of articles){
     
-    if(el.getAttribute('class') === 'pizza__article'){
-        
+    if(el.id === 'basicProduct'){
+        el.addEventListener('click', () => openModalMainForBasic(el))
     } else{
-        el.addEventListener('click', () => openModalMain(el))
+        
     }
 }
 
@@ -392,9 +428,13 @@ if(localStorage.getItem('DodoPizza') !== null){
 
     for(let i = 0; i < arr.length; i++){
         for(let el of article){
-            if(arr[i].product === el.children[1].children[0].innerText.split('  ')[0].split('/n')[0].split('\n')[0].split('/n')[0].split('\n')[0]){
-                addNewProduct(el.children[1].children[1].children[1], true)
+            if(el.id === 'basicProduct'){
+                // console.log(el.children[1].children[0].children[0].textContent);
+                if(arr[i].product === el.children[1].children[0].children[0].textContent){
+                    addNewProduct(el.children[1].children[1].children[1], true)
+                }
             }
         }
     }
+    
 }

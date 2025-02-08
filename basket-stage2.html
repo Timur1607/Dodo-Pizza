@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script/stage2.js" type="module" defer></script>
+    <link rel="shortcut icon" href="./PizzaIcon.svg" type="image/x-icon">
+</head>
+<body class="stage2-body">
+    <header class="basket-header stage2-header">
+        <div class="container container-basket__600px">
+            <a href="basket.html" class="basket-back__600px">
+                <img src="./img/all/back arrow black.png" alt="">
+            </a>
+            <div class="basket-header__title">
+                <img class="basket-header__title_img" src="./PizzaIcon.svg" alt="логотип пиццерии Dodo Pizza">
+                <div class="basket-header__title_text">
+                    <img class="basket-header__title_text_img" src="./PizzaText.svg" alt="название пиццерии додо пицца"></img>
+                    <p class="basket-header__title_text_text">Сеть пиццерий №1 в России</p>
+                </div>
+            </div>
+            <img class="basket-header__stage1" src="./img/all/stage2.svg" alt="">
+        </div>
+    </header>
+    <hr class="basket-hr_top ">
+    <main class="stage2-main">
+        <div class="container container-stage2">
+            <div class="stage2-main__info">
+                <form class="stage2-main__form">
+                    <h1 class="stage2-main__form-title">Заказ на доставку</h1>
+                    <div class="stage2-main__form-title_name">
+                        <label for="name" class="stage2-main__form-title_name-label stage2-main__form-title_label">Имя</label>
+                        <input for="" id="name" class="stage2-main__form-title_name-input" required></input>
+                    </div>
+                    <div class="stage2-main__form-title_number">
+                        <label for="number" class="stage2-main__form-title_number-label stage2-main__form-title_label">Номер телефона</label>
+                        <input for="" id="number" type="number" class="stage2-main__form-title_number-input" required></input>
+                    </div>
+                    <div class="stage2-main__form-title_address" >
+                        <label for="address" class="stage2-main__form-title_address-label stage2-main__form-title_label">Куда доставить</label>
+                        <input id="address" rows="4" cols="50" type="textarea" for="" class="stage2-main__form-title_address-input" required></input>
+                    </div>
+                    <div class="basket-main-result__buttons stage2-main__buttons">
+                        <a href="./basket.html" class="basket-main-result__buttons_back stage2-main__button-back">
+                            <img class="basket-main-result__buttons_back_img" src="./img/all/back arrow.svg" alt="">
+                            <p class="basket-main-result__buttons_back_text">Назад в корзину</p>
+                        </a>
+                        <a href="basket-stage3.html" type="submit" class="basket-main-result__buttons_next stage2-main__button-next stage-2__button" href="basket-stage2.html">
+                            <p class="basket-main-result__buttons_next_text stage-2__button_next">Оформить заказ на 675 ₽ </p>
+                            <img class="basket-main-result__buttons_next_img" src="./img/all/next arrow.svg" alt="">
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <div class="stage2-main__check">
+                <p class="stage2-main__check_title">Состав заказа</p>
+                <div class="stage2-main__check_articles">
+            
+                </div>
+                <div class="stage2-main__check_footer">
+                    <p class="stage2-main__check_footer_left">Стоимость заказа</p>
+                    <p class="stage2-main__check_footer_right"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="basket-footer">
+        <div class="container">
+            <div class="basket-footer__contacts">
+                <p class="basket-footer__contacts_number">8-800-302-00-60</p>
+                <p class="basket-footer__contacts_text">Звонок бесплатный</p>
+            </div>
+            <hr class="basket-hr">
+            <div class="footer-rights basket-footer__rights">
+                <div class="footer-rights__logo">
+                    <img class="footer-rights__logo_logo" src="img/logo-white.svg" alt="">
+                    <p class="footer-rights__logo_data">© 2021</p>
+                </div>
+                <div class="footer-rights__nav">
+                    <p class="footer-rights__nav_info">Правовая информация</p>
+                    <p class="footer-rights__nav_calories">Калорийность и состав</p>
+                    <p class="footer-rights__nav_help">Помощь</p>
+                </div>
+                <p class="footer-rights_mail footer-info__store_mail">feedback@dodopizza.com</p>
+            </div>
+        </div>
+    </footer>
+    <div class="container basket__bottom stage2__bottom">
+    <div class="basket-main-result basket-main-result--600px">
+        <div class="basket-main-result__price">
+            <p class="basket-main-result__price_text">Сумма заказа:</p>
+            <p class="basket-main-result__price_price"></p>
+        </div>
+        <div class="basket-main-result__buttons">
+            <button class="basket-main-result__buttons_back">
+                <img class="basket-main-result__buttons_back_img" src="./img/all/back arrow.svg" alt="">
+                <p class="basket-main-result__buttons_back_text">Вернуться в меню</p>
+            </button>
+            <a href="basket-stage3.html" class="basket-main-result__buttons_next stage-2__button">
+                <p class="basket-main-result__buttons_next_text stage-2__button_next">Оформить заказ</p>
+                <img class="basket-main-result__buttons_next_img" src="./img/all/next arrow.svg" alt="">
+            </a>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
