@@ -2466,6 +2466,8 @@ table {
   }
   .basket__bottom {
     background: #FFF;
+    position: absolute;
+    bottom: 0;
   }
   .basket-back__600px {
     display: block;
