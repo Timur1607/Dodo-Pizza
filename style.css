@@ -2444,7 +2444,6 @@ table {
     justify-content: flex-start;
   }
   .basket {
-    height: 100vh;
     justify-content: space-between;
     background: #F3F3F7;
   }
@@ -2651,7 +2650,7 @@ table {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  width: 160px;
+  width: 140px;
 }
 .stage2-main__form-title_name {
   display: flex;
@@ -2673,6 +2672,7 @@ table {
   font-weight: 400;
   line-height: normal;
   padding-left: 16px;
+  transition: 0.2s;
 }
 .stage2-main__form-title_number {
   display: flex;
@@ -2817,6 +2817,17 @@ table {
   line-height: normal;
 }
 
+.forPlaceholder::-moz-placeholder {
+  color: red;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.forPlaceholder::placeholder {
+  color: red;
+  transition: 0.2s;
+}
+
 @media screen and (max-width: 1175px) {
   .stage2-main {
     margin: 0;
@@ -2856,6 +2867,12 @@ table {
   }
   .stage2-main__button-next {
     margin-left: auto;
+  }
+}
+@media screen and (max-width: 700px) {
+  .stage2-main__form-title_address-label {
+    margin-right: 20px;
+    white-space: nowrap;
   }
 }
 @media screen and (max-width: 600px) {
@@ -3068,7 +3085,7 @@ table {
   transition: 0.2s;
 }
 .cancel-window {
-  padding: 5px 5px;
+  padding: 20px 50px;
   max-width: 700px;
   width: 100%;
   background-color: #FFF;
@@ -3079,6 +3096,7 @@ table {
   align-items: center;
   justify-content: space-between;
   gap: 50px;
+  height: 300px;
 }
 .cancel__text {
   color: #000;
@@ -3091,7 +3109,7 @@ table {
 .cancel__buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 .cancel__button_yes {

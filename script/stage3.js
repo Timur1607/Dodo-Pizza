@@ -1,4 +1,5 @@
 let arr = JSON.parse(localStorage.information)
+console.log(arr);
 
 let address = document.querySelector('.stage3-main__div-600px_text')
 address.textContent = arr.address

@@ -2,7 +2,7 @@ import {data} from "../data.js"
 let arr = JSON.parse(localStorage.DodoPizza)
 // let localStorage = window.localStorage
 let info = []
-
+//<----------------------------------------------ПРОГРУЗКА КАРТОЧЕК И ЦЕНА--------------------------------------------------->
 let checkArticles = document.querySelector('.stage2-main__check_articles')
 for(let i = 0; i < arr.length; i++){
     let checkArticle = document.createElement('article')
@@ -34,8 +34,11 @@ if(window.innerWidth > 600){
     priceInButton[1].textContent = `Оформить заказ на ${price.textContent}`
 }
 
-let button = document.querySelector('.stage2-main__form')
-button.addEventListener('submit', (event) => {
+//<----------------------------------------------------------ФОРМА--------------------------------------------------------------------->
+
+
+let buttonForm = document.querySelector('.stage2-main__form')
+buttonForm.addEventListener('submit', (event) => {
     event.preventDefault()
     info.push({"name":`${name.value}` , "number": `${number.value}`, "address": `${address.value}`})
     localStorage.setItem("information", JSON.stringify(info))
@@ -49,3 +52,26 @@ console.log(address.value);
 
 localStorage.setItem("information", JSON.stringify(info))
 
+let button = document.querySelector('.stage-2__button')
+button.addEventListener('click', (event) => {
+    if(name.value === '' || number.value === '' || address.value === ''){
+        event.preventDefault()
+        console.log("да");
+        if(name.value === ''){
+            name.classList.add('forPlaceholder')
+            name.placeholder = 'Введите ваше имя!'
+        }
+        if(number.value === ''){
+            number.classList.add('forPlaceholder')
+            number.placeholder = 'Введите ваш номер!'
+        }
+        if(address.value === ''){
+            address.classList.add('forPlaceholder')
+            address.placeholder = 'Введите ваш адрес!'
+        }
+    }
+    if(name.value !== '' || number.value !== '' || address.value !== ''){
+        info.push({"name":`${name.value}` , "number": `${number.value}`, "address": `${address.value}`})
+        localStorage.setItem("information", JSON.stringify(info))
+    }
+})

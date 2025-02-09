@@ -36,7 +36,7 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
-                width: 160px;
+                width: 140px;
             }
 
             &_name{
@@ -58,6 +58,7 @@
                     font-weight: 400;
                     line-height: normal;
                     padding-left: 16px;
+                    transition: 0.2s;
                 }
             }
             &_number{
@@ -216,6 +217,11 @@
     }
 }
 
+.forPlaceholder::placeholder{
+    color: red;
+    transition: 0.2s;
+}
+
 @media screen and (max-width:1175px){
     .stage2-main{
         margin: 0;
@@ -257,6 +263,13 @@
         &__button-next{
             margin-left: auto;
         }
+    }
+}
+
+@media screen and (max-width:700px){
+    .stage2-main__form-title_address-label {
+        margin-right: 20px;
+        white-space: nowrap;
     }
 }
 
