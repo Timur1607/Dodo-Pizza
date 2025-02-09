@@ -52,8 +52,16 @@ console.log(address.value);
 
 localStorage.setItem("information", JSON.stringify(info))
 
-let button = document.querySelector('.stage-2__button')
-button.addEventListener('click', (event) => {
+let button = document.querySelectorAll('.stage-2__button')
+console.log(button);
+
+// if(innerWidth > 600){
+//     button = document.querySelectorAll('stage-2__button')[0]
+// } else if(innerWidth <= 600){
+//     button = document.querySelectorAll('stage-2__button')[1]
+// }
+
+button[(innerWidth > 600 ? 0 : 1)].addEventListener('click', (event) => {
     if(name.value === '' || number.value === '' || address.value === ''){
         event.preventDefault()
         console.log("да");

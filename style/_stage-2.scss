@@ -276,11 +276,11 @@
 @media screen and (max-width:600px){
     .stage2-body{
         background: #F3F3F7;
-        height: 100vh;
+        // height: 100vh;
         
     }
     .stage2__bottom{
-        position: absolute;
+        position: fixed;
         bottom: 0;
     }
     .stage2-main{
