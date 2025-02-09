@@ -2465,7 +2465,7 @@ table {
   }
   .basket__bottom {
     background: #FFF;
-    position: absolute;
+    position: fixed;
     bottom: 0;
   }
   .basket-back__600px {
