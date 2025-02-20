@@ -42,6 +42,47 @@ export const data = {
             "big-price": 1025,
             "img": 'img/pizza/halfPizza.png',
             "assembly": true,
+            "addition": [
+                {
+                    'img':'img/pizza/additive/cheese side.png',
+                    'name':'Сырный бортик',
+                    'nameENG': 'cheese side',
+                    'price': 599,
+                },
+                {
+                    'img':'img/pizza/additive/Champignons.jpg',
+                    'name':'Шампиньоны',
+                    'nameENG': 'Champignons',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Chick.png',
+                    'name':'Цыпленок',
+                    'nameENG': 'Chick',
+                    'price':59 ,
+                },
+                {
+                    'img':'img/pizza/additive/feta cheese.png',
+                    'name':'Брынза',
+                    'nameENG': 'fetaCheese',
+                    'price': 59,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy Jalapeno.png',
+                    'name':'Острый халапенью',
+                    'nameENG': 'spicyJalapeno',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy chicken.png',
+                    'name':'Острый цыпленок',
+                    'nameENG': 'spicyChicken',
+                    'price': 59,
+                },
+            ],
+            "ingredients": [
+                'сыр чеддер'
+            ],
         },
         {
             "name": "Пепперони-сердце",
@@ -50,6 +91,48 @@ export const data = {
             "medium-price": 925,
             "big-price": 1045,
             "img": 'img/pizza/pizzaPepperoni.png',
+            "ingredients": [
+                'сыр чеддер'
+            ],
+            "addition": [
+                {
+                    'img':'img/pizza/additive/cheese side.png',
+                    'name':'Сырный бортик',
+                    'nameENG': 'cheese side',
+                    'price': 599,
+                },
+                {
+                    'img':'img/pizza/additive/Champignons.jpg',
+                    'name':'Шампиньоны',
+                    'nameENG': 'Champignons',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Chick.png',
+                    'name':'Цыпленок',
+                    'nameENG': 'Chick',
+                    'price':59 ,
+                },
+                {
+                    'img':'img/pizza/additive/feta cheese.png',
+                    'name':'Брынза',
+                    'nameENG': 'fetaCheese',
+                    'price': 59,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy Jalapeno.png',
+                    'name':'Острый халапенью',
+                    'nameENG': 'spicyJalapeno',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy chicken.png',
+                    'name':'Острый цыпленок',
+                    'nameENG': 'spicyChicken',
+                    'price': 59,
+                },
+            ],
+            
         },
         {
             "name": "Пирог-сердце",
@@ -58,6 +141,47 @@ export const data = {
             "medium-price": 925,
             "big-price": 1045,
             "img": 'img/pizza/pieHeart.png',
+            "ingredients": [
+                'сыр чеддер'
+            ],
+            "addition": [
+                {
+                    'img':'img/pizza/additive/cheese side.png',
+                    'name':'Сырный бортик',
+                    'nameENG': 'cheese side',
+                    'price': 599,
+                },
+                {
+                    'img':'img/pizza/additive/Champignons.jpg',
+                    'name':'Шампиньоны',
+                    'nameENG': 'Champignons',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Chick.png',
+                    'name':'Цыпленок',
+                    'nameENG': 'Chick',
+                    'price':59 ,
+                },
+                {
+                    'img':'img/pizza/additive/feta cheese.png',
+                    'name':'Брынза',
+                    'nameENG': 'fetaCheese',
+                    'price': 59,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy Jalapeno.png',
+                    'name':'Острый халапенью',
+                    'nameENG': 'spicyJalapeno',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy chicken.png',
+                    'name':'Острый цыпленок',
+                    'nameENG': 'spicyChicken',
+                    'price': 59,
+                },
+            ],
         },
         {
             "name": "Чиззи чедер",
@@ -66,6 +190,47 @@ export const data = {
             "medium-price": 925,
             "big-price": 1045,
             "img": 'pizzas-img/cheesy-cheddar/cheesy-chadder-middle-traditional.jpeg',
+            "ingredients": [
+                'сыр чеддер'
+            ],
+            "addition": [
+                {
+                    'img':'img/pizza/additive/cheese side.png',
+                    'name':'Сырный бортик',
+                    'nameENG': 'cheese side',
+                    'price': 599,
+                },
+                {
+                    'img':'img/pizza/additive/Champignons.jpg',
+                    'name':'Шампиньоны',
+                    'nameENG': 'Champignons',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Chick.png',
+                    'name':'Цыпленок',
+                    'nameENG': 'Chick',
+                    'price':59 ,
+                },
+                {
+                    'img':'img/pizza/additive/feta cheese.png',
+                    'name':'Брынза',
+                    'nameENG': 'fetaCheese',
+                    'price': 59,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy Jalapeno.png',
+                    'name':'Острый халапенью',
+                    'nameENG': 'spicyJalapeno',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy chicken.png',
+                    'name':'Острый цыпленок',
+                    'nameENG': 'spicyChicken',
+                    'price': 59,
+                },
+            ],
         },
         {
             "name": "Цыпленок блю чиз",
@@ -74,6 +239,47 @@ export const data = {
             "medium-price": 745,
             "big-price": 865,
             "img": './img/pizza/chickenBlueCheese.png',
+            "ingredients": [
+                'сыр чеддер'
+            ],
+            "addition": [
+                {
+                    'img':'img/pizza/additive/cheese side.png',
+                    'name':'Сырный бортик',
+                    'nameENG': 'cheese side',
+                    'price': 599,
+                },
+                {
+                    'img':'img/pizza/additive/Champignons.jpg',
+                    'name':'Шампиньоны',
+                    'nameENG': 'Champignons',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Chick.png',
+                    'name':'Цыпленок',
+                    'nameENG': 'Chick',
+                    'price':59 ,
+                },
+                {
+                    'img':'img/pizza/additive/feta cheese.png',
+                    'name':'Брынза',
+                    'nameENG': 'fetaCheese',
+                    'price': 59,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy Jalapeno.png',
+                    'name':'Острый халапенью',
+                    'nameENG': 'spicyJalapeno',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy chicken.png',
+                    'name':'Острый цыпленок',
+                    'nameENG': 'spicyChicken',
+                    'price': 59,
+                },
+            ],
         },
         {
             "name": "Нежный лосось",
@@ -82,6 +288,47 @@ export const data = {
             "medium-price": 795,
             "big-price": 915,
             "img": './img/pizza/tenderSalomon.png',
+            "ingredients": [
+                'сыр чеддер'
+            ],
+            "addition": [
+                {
+                    'img':'img/pizza/additive/cheese side.png',
+                    'name':'Сырный бортик',
+                    'nameENG': 'cheese side',
+                    'price': 599,
+                },
+                {
+                    'img':'img/pizza/additive/Champignons.jpg',
+                    'name':'Шампиньоны',
+                    'nameENG': 'Champignons',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Chick.png',
+                    'name':'Цыпленок',
+                    'nameENG': 'Chick',
+                    'price':59 ,
+                },
+                {
+                    'img':'img/pizza/additive/feta cheese.png',
+                    'name':'Брынза',
+                    'nameENG': 'fetaCheese',
+                    'price': 59,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy Jalapeno.png',
+                    'name':'Острый халапенью',
+                    'nameENG': 'spicyJalapeno',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy chicken.png',
+                    'name':'Острый цыпленок',
+                    'nameENG': 'spicyChicken',
+                    'price': 59,
+                },
+            ],
         },
         {
             "name": "Сырная",
@@ -90,6 +337,47 @@ export const data = {
             "medium-price": 745,
             "big-price": 865,
             "img": './img/pizza/cheese.png',
+            "ingredients": [
+                'сыр чеддер'
+            ],
+            "addition": [
+                {
+                    'img':'img/pizza/additive/cheese side.png',
+                    'name':'Сырный бортик',
+                    'nameENG': 'cheese side',
+                    'price': 599,
+                },
+                {
+                    'img':'img/pizza/additive/Champignons.jpg',
+                    'name':'Шампиньоны',
+                    'nameENG': 'Champignons',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Chick.png',
+                    'name':'Цыпленок',
+                    'nameENG': 'Chick',
+                    'price':59 ,
+                },
+                {
+                    'img':'img/pizza/additive/feta cheese.png',
+                    'name':'Брынза',
+                    'nameENG': 'fetaCheese',
+                    'price': 59,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy Jalapeno.png',
+                    'name':'Острый халапенью',
+                    'nameENG': 'spicyJalapeno',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy chicken.png',
+                    'name':'Острый цыпленок',
+                    'nameENG': 'spicyChicken',
+                    'price': 59,
+                },
+            ],
         },
         {
             "name": "Пепперони фреш",
@@ -98,6 +386,47 @@ export const data = {
             "medium-price": 545,
             "big-price": 665,
             "img": './img/pizza/pepperoniFresh.png',
+            "ingredients": [
+                'сыр чеддер'
+            ],
+            "addition": [
+                {
+                    'img':'img/pizza/additive/cheese side.png',
+                    'name':'Сырный бортик',
+                    'nameENG': 'cheese side',
+                    'price': 599,
+                },
+                {
+                    'img':'img/pizza/additive/Champignons.jpg',
+                    'name':'Шампиньоны',
+                    'nameENG': 'Champignons',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Chick.png',
+                    'name':'Цыпленок',
+                    'nameENG': 'Chick',
+                    'price':59 ,
+                },
+                {
+                    'img':'img/pizza/additive/feta cheese.png',
+                    'name':'Брынза',
+                    'nameENG': 'fetaCheese',
+                    'price': 59,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy Jalapeno.png',
+                    'name':'Острый халапенью',
+                    'nameENG': 'spicyJalapeno',
+                    'price':39 ,
+                },
+                {
+                    'img':'img/pizza/additive/Spicy chicken.png',
+                    'name':'Острый цыпленок',
+                    'nameENG': 'spicyChicken',
+                    'price': 59,
+                },
+            ],
         },
     ],
 
@@ -250,4 +579,43 @@ export const data = {
             'price': 175,
         },
     ],
+
+    // 'pizzaAddition':[
+    //     {
+    //         'img':'img/pizza/additive/cheese side.png',
+    //         'name':'Сырный бортик',
+    //         'nameENG': 'cheese side',
+    //         'price': 599,
+    //     },
+    //     {
+    //         'img':'img/pizza/additive/Champignons.jpg',
+    //         'name':'Шампиньоны',
+    //         'nameENG': 'Champignons',
+    //         'price':39 ,
+    //     },
+    //     {
+    //         'img':'img/pizza/additive/Chick.png',
+    //         'name':'Цыпленок',
+    //         'nameENG': 'Chick',
+    //         'price':59 ,
+    //     },
+    //     {
+    //         'img':'img/pizza/additive/feta cheese.png',
+    //         'name':'Брынза',
+    //         'nameENG': 'fetaCheese',
+    //         'price': 59,
+    //     },
+    //     {
+    //         'img':'img/pizza/additive/Spicy Jalapeno.png',
+    //         'name':'Острый халапенью',
+    //         'nameENG': 'spicyJalapeno',
+    //         'price':39 ,
+    //     },
+    //     {
+    //         'img':'img/pizza/additive/Spicy chicken.png',
+    //         'name':'Острый цыпленок',
+    //         'nameENG': 'spicyChicken',
+    //         'price': 59,
+    //     },
+    // ],
 }

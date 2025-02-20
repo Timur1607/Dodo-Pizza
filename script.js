@@ -372,13 +372,13 @@ for(let el of basicProduct){
 }
 
 //<-----------------------------------------------------------МОДАЛЬНОЕ ОКНО------------------------------------------------->
-let modalMain = document.querySelector(".modalMain")
-let closemodalMain = document.querySelector('.closemodalMain')
-let modalMainImg = document.querySelector('.modalMain__window_img')
-let modalMainName = document.querySelector('.modalMain__window_content_info_name')
-let modalMainAmount = document.querySelector('.modalMain__window_content_info_amount')
-let modalMainDesc = document.querySelector('.modalMain__window_content_info_desc')
-let modalMainButton = document.querySelector('.modalMain__window_content_button')
+let modalMain = document.querySelector(".modalMain-basic")
+let closemodalMain = document.querySelector('.closemodalMain-basic')
+let modalMainImg = document.querySelector('.modalMain-basic__window_img')
+let modalMainName = document.querySelector('.modalMain-basic__window_content_info_name')
+let modalMainAmount = document.querySelector('.modalMain-basic__window_content_info_amount')
+let modalMainDesc = document.querySelector('.modalMain-basic__window_content_info_desc')
+let modalMainButton = document.querySelector('.modalMain-basic__window_content_button')
 
 let closeTheModalMain = () => {
     modalMain.style.opacity = '0'
@@ -421,6 +421,267 @@ for(let el of articles){
     }
 }
 
+//<-----------------------------------------------------------МОДАЛЬНОЕ ОКНО ДЛЯ ПИЦЦЫ------------------------------------------------->
+let pizzaModalMain = document.querySelector('.pizzaModalMain')
+let closePizzaModalMain = document.querySelector('.closemodalMain-pizza')
+let sizeCustom = document.querySelector('.pizzaForm__size')
+let sizeCustomCheck = document.querySelector('.pizzaForm__size_check')
+let typeCustom = document.querySelector('.pizzaForm__type')
+let typeCustomCheck = document.querySelector('.pizzaForm__type_check')
+let pizzaImg = document.querySelector('.pizzaModalMain__window_img')
+
+let pizzaFormButton = document.querySelector('.pizzaForm__button')
+
+let ingredientsForPizza = document.querySelector('.pizzaForm__fullDesc')
+let pizzaPrice = null
+
+let textAdditiveListener = (div) => {
+    div.children[1].src = 'img/all/pizzaModalMainReturn.svg'
+    div.children[0].style.setProperty('border-bottom', 'none')
+    div.children[0].style.setProperty('text-decoration', 'line-through')
+}
+
+
+let additiveCount = 0
+let addAdditiveForPizza = (additive) =>{  // label карточек добавки (слушатель)
+    let divForAdditives = document.querySelectorAll('.pizzaForm__fullDesc_additive')
+    let check = true
+    for(let el of divForAdditives){ //второе нажатие на карточку
+        if(additive.children[2].textContent === el.children[0].textContent){
+            check = false
+            pizzaPrice = pizzaPrice - (+additive.children[3].textContent.split(' ')[0])
+            el.remove() 
+        }
+    }
+    
+    
+    let divForAdditive = document.createElement('div')
+    divForAdditive.classList.add('pizzaForm__fullDesc_additive')
+    divForAdditive.innerHTML = `
+        <p class="pizzaForm__fullDesc_additive_point">${additive.children[2].textContent}</p>
+        <img class="pizzaForm__fullDesc_additive_img" src="./img/all/pizzaModalMainDelete.svg" alt="">
+    `
+    // let textAdditive = document.querySelector('.pizzaForm__fullDesc_additive_img')
+    divForAdditive.children[1].addEventListener('click', () => textAdditiveListener(divForAdditive))
+    
+    
+
+    if(check === true){
+        pizzaPrice = +pizzaFormButton.textContent.split(' ')[4]
+        pizzaPrice = pizzaPrice + +additive.children[3].textContent.split(' ')[0]
+        ingredientsForPizza.appendChild(divForAdditive)
+        pizzaFormButton.textContent = `Добавить в корзину за ${pizzaPrice} ₽`
+
+        
+        let lastEl = basicIngredients.children.length - 2
+        console.log(lastEl);
+        console.log(basicIngredients.children[lastEl].tagName);
+        // console.log();
+        
+        basicIngredients.children[lastEl].textContent = `${basicIngredients.children[lastEl].textContent},`
+        
+
+    } else if(check === false){
+
+    }
+
+    
+}
+// <p class="pizzaForm__fullDesc_additive_point_comma">,</p>
+
+
+let pizzaSizeLabel = document.querySelectorAll('.pizzaForm__size_label')
+for(let el of pizzaSizeLabel){ //<--------------------------ПЕРЕДВИЖЕНИЕ В РАЗМЕРЕ---------->
+    el.addEventListener('click', (el) =>{
+        if(el.srcElement === sizeCustom.children[1]){
+            if(window.innerWidth <= 890 && window.innerWidth > 690){
+                sizeCustomCheck.style.left = '2px'
+                console.log('1');
+            } else{
+                sizeCustomCheck.style.left = '2px'
+                console.log('1');
+            }
+            
+        } else if(el.srcElement === sizeCustom.children[3]){
+            if(window.innerWidth <= 890 && window.innerWidth > 690){
+                console.log('2');
+                sizeCustomCheck.style.left = '70px'
+            } else{
+                console.log('2');
+                sizeCustomCheck.style.left = '108px'
+            }
+            
+        } else if(el.srcElement === sizeCustom.children[5]){
+            if(window.innerWidth <= 890 && window.innerWidth > 690){
+                console.log('3');
+                sizeCustomCheck.style.left = '138px'
+            } else{
+                console.log('3');
+                sizeCustomCheck.style.left = '214px'
+            }
+            
+        }
+    })
+}
+
+let pizzaTypeLabel = document.querySelectorAll('.pizzaForm__type_label')
+for(let el of pizzaTypeLabel){ //<--------------------------ПЕРЕДВИЖЕНИЕ В ТИПЕ ПИЦЦЫ---------->
+    el.addEventListener('click', (el) =>{
+        if(el.srcElement === typeCustom.children[1]){
+            if(window.innerWidth <= 890 && window.innerWidth > 690){
+                typeCustomCheck.style.left = '2px'
+                console.log('1');
+            } else{
+                typeCustomCheck.style.left = '2px'
+                console.log('1');
+            }
+            
+        } else if(el.srcElement === typeCustom.children[3]){
+
+            if(window.innerWidth <= 890 && window.innerWidth > 690){
+                console.log('2');
+                typeCustomCheck.style.left = '105px'
+            } else{
+                console.log('2');
+                typeCustomCheck.style.left = '161px'
+            }
+            
+        }
+    })
+}
+
+let pizzaAdditiveArticles = document.querySelector('.pizzaForm__additive_articles')
+let loadingAdditiveArticles = (pizza) => { // <------------------ПРОГРУЗКА КАРТОЧЕК----------------->
+    
+    for(let el of data.pizza){
+        if(pizza.children[1].children[0].textContent === el.name){
+            pizzaAdditiveArticles.innerHTML = ``
+            for(let i = 0; i < el.addition.length; i++){
+                let pizzaAdditiveArticle = document.createElement('label')
+                pizzaAdditiveArticle.classList.add('pizzaForm__article')
+                pizzaAdditiveArticle.innerHTML = `
+                    <img class="pizzaForm__article_check" src="./img/all/cil_check-circle.svg" alt="">
+                    <img class="pizzaForm__article_img" src="${el.addition[i].img}" alt="">
+                    <p class="pizzaForm__article_name">${el.addition[i].name}</p>
+                    <p class="pizzaForm__article_price">${el.addition[i].price} ₽</p>
+                `
+                pizzaAdditiveArticle.setAttribute('for', `${el.addition[i].nameENG}`);
+        
+                let input = document.createElement('input')
+                input.classList.add('pizzaForm__article_input')
+                input.type = 'checkbox'
+                input.id = `${el.addition[i].nameENG}`
+                input.name = "additive"
+
+                
+        
+                pizzaAdditiveArticles.appendChild(input)
+                pizzaAdditiveArticles.appendChild(pizzaAdditiveArticle)
+                
+        
+                pizzaAdditiveArticle.addEventListener('click', () => addAdditiveForPizza(pizzaAdditiveArticle))
+            }
+        }
+    }
+    
+}
+
+
+let basicIngredients = document.querySelector('.pizzaForm__fullDesc')
+let openModalMainForPizza = (el) => { //<-----------------------ОТКРЫТИЕ ОКНА--------------------->
+    if(window.innerWidth > 515){ // размеры кнопок
+        pizzaModalMain.style.setProperty('z-index', '20')
+        pizzaModalMain.style.opacity = '1'
+    } else if(window.innerWidth <= 515){
+        pizzaModalMain.style.top = '0'
+        pizzaModalMain.style.setProperty('z-index', '20')
+    }
+    if(window.innerWidth <= 890 && window.innerWidth > 690){
+        sizeCustomCheck.style.left = '70px'
+    }
+
+    pizzaImg.src = el.children[0].src
+    sizeCustom.children[2].checked = true
+    
+    for(let i = 0; i < data.pizza.length; i++){
+        if(el.children[1].children[0].textContent === data.pizza[i].name){
+            pizzaFormButton.textContent = `Добавить в корзину за ${data.pizza[i]["medium-price"]} ₽`  // цена
+
+            for(let n = 0; n < data.pizza[i].ingredients.length; n++){ //базовые ингредиенты
+                let basicIngredient = document.createElement('p')
+                basicIngredient.classList.add('pizzaForm__fullDesc_basePoint')
+                basicIngredient.textContent = `${data.pizza[i].ingredients[n]}`
+                basicIngredients.appendChild(basicIngredient)
+            }
+
+            let openModalMainForPizzaTitle = document.querySelector('.pizzaForm__title')
+            openModalMainForPizzaTitle.textContent = `${data.pizza[i].name}`
+        }
+    }
+    typeCustom.children[0].checked = true
+
+
+    loadingAdditiveArticles(el)
+}
+
+if(window.innerWidth <= 515){
+    closePizzaModalMain = document.querySelector('.pizzaModalMain__closing')
+}
+
+closePizzaModalMain.addEventListener('click', () => {
+
+    additiveCount = 0
+    
+    if(window.innerWidth > 515){
+        pizzaModalMain.style.setProperty('z-index', '-1')
+        pizzaModalMain.style.opacity = '0'
+    } else if(window.innerWidth <= 515){
+        pizzaModalMain.style.top = '100%'
+        // pizzaModalMain.style.setProperty('z-index', '20')
+    }
+    setTimeout(() => { //<----------------все в обычное положение------->
+            
+        if(window.innerWidth <= 890 && window.innerWidth > 690){
+            sizeCustomCheck.style.left = '70px'
+        } else{
+            sizeCustomCheck.style.left = '108px'
+        }
+        if(window.innerWidth <= 890 && window.innerWidth > 690){
+            typeCustomCheck.style.left = '2px'
+        } else{
+            typeCustomCheck.style.left = '2px'
+        }
+        
+        for(let el of basicIngredients.children){
+            el.remove()
+        }
+        while(basicIngredients.children.length !== 0){
+            for(let i = 0; i < basicIngredients.children.length; i++ ){
+                basicIngredients.children[i].remove()
+            }
+        }
+    }, 400);
+})
+
+
+
+
+
+
+
+
+
+
+
+let pizzaArticle = document.querySelectorAll('.pizza__article')
+for(let el of pizzaArticle){
+    el.addEventListener('click', () => openModalMainForPizza(el))
+}
+
+
+
+
+
 //<-----------------------------------------------------------------ХРАНИЛИЩЕ------------------------------------------------------------>
 if(localStorage.getItem('DodoPizza') !== null){
     arr = JSON.parse(localStorage.DodoPizza)
@@ -436,5 +697,9 @@ if(localStorage.getItem('DodoPizza') !== null){
             }
         }
     }
-    
 }
+
+
+
+
+

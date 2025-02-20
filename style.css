@@ -3202,4 +3202,516 @@ table {
     flex-direction: column;
     gap: 10px;
   }
+}
+.pizzaForm {
+  width: 320px;
+  position: relative;
+  height: 550px;
+}
+.pizzaForm__title {
+  color: #000;
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 3px;
+}
+.pizzaForm__shortDesc {
+  color: var(--Gray-dark, #73798C);
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 13px;
+}
+.pizzaForm__fullDesc {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 3px;
+  height: 65px;
+}
+.pizzaForm__fullDesc_basePoint {
+  color: #4D4D4D;
+  font-family: "Nunito", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.pizzaForm__fullDesc_additive {
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+  align-items: center;
+}
+.pizzaForm__fullDesc_additive_point {
+  color: #4D4D4D;
+  font-family: "Nunito", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-bottom: 1px dashed #72788B;
+}
+.pizzaForm__fullDesc_additive_point_comma {
+  color: #4D4D4D;
+  font-family: "Nunito", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.pizzaForm__fullDesc_additive_img {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+.pizzaForm__type {
+  width: 320px;
+  height: 32px;
+  border-radius: 100px;
+  background: #F3F3F7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 19px;
+}
+.pizzaForm__type_label {
+  width: 157px;
+  height: 32px;
+  color: #000;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.7;
+  transition: 0.2s;
+  align-content: center;
+  z-index: 1;
+  cursor: pointer;
+}
+.pizzaForm__type_input {
+  display: none;
+}
+.pizzaForm__type_input:checked + label {
+  opacity: 1;
+}
+.pizzaForm__type_check {
+  border-radius: 100px;
+  background: #FFF;
+  box-shadow: 0px 3px 15px 0px rgba(6, 5, 50, 0.05);
+  width: 157px;
+  height: 28px;
+  position: absolute;
+  left: 2px;
+  transition: 0.3s;
+}
+.pizzaForm__size {
+  width: 320px;
+  height: 32px;
+  border-radius: 100px;
+  background: #F3F3F7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  position: relative;
+}
+.pizzaForm__size_label {
+  width: 106px;
+  height: 32px;
+  color: #000;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.7;
+  transition: 0.2s;
+  align-content: center;
+  z-index: 1;
+  cursor: pointer;
+}
+.pizzaForm__size_check {
+  border-radius: 100px;
+  background: #FFF;
+  box-shadow: 0px 3px 15px 0px rgba(6, 5, 50, 0.05);
+  width: 104px;
+  height: 28px;
+  position: absolute;
+  left: 108px;
+  transition: 0.3s;
+}
+.pizzaForm__size_input {
+  display: none;
+}
+.pizzaForm__size_input:checked + label {
+  opacity: 1;
+}
+.pizzaForm__additive {
+  width: 320px;
+}
+.pizzaForm__additive_title {
+  color: #000;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 11px;
+}
+.pizzaForm__additive_articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 10px;
+  height: 267px;
+  width: 320px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: scroll;
+  padding-bottom: 30px;
+}
+.pizzaForm__additive_articles::-webkit-scrollbar {
+  display: none;
+}
+.pizzaForm__button {
+  color: #FFF;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 320px;
+  height: 48px;
+  border-radius: 1000px;
+  background: var(--Orange-corporate, #F96900);
+  border: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: 0.4s;
+}
+.pizzaForm__button:hover {
+  background: var(--Orange-hover, #ED5D08);
+}
+.pizzaForm__article {
+  width: 100px;
+  height: 150px;
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: 0px 4px 20px 0px rgba(6, 5, 50, 0.05);
+  padding: 0 9px 10px 9px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #FFF;
+  transition: 0.1s;
+  cursor: pointer;
+}
+.pizzaForm__article_img {
+  position: absolute;
+  left: 0;
+  top: 13px;
+}
+.pizzaForm__article_name {
+  color: #000;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 81px;
+  margin-top: 85px;
+  z-index: 1;
+}
+.pizzaForm__article_price {
+  color: #000;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.pizzaForm__article_check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: none;
+  transition: 0.1s;
+}
+.pizzaForm__article_input {
+  transition: 0.2s;
+  display: none;
+}
+.pizzaForm__article_input:checked + label {
+  border: 1px solid var(--Orange-corporate, #F96900);
+  background: #FFF;
+}
+.pizzaForm__article_input:checked + label .pizzaForm__article_check {
+  display: block;
+}
+
+.pizzaModalMain {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.pizzaModalMain__closing {
+  display: none;
+}
+.pizzaModalMain__window {
+  display: flex;
+  flex-direction: row;
+  max-width: 920px;
+  width: 100%;
+  padding: 30px;
+  opacity: 1;
+  background-color: #FFF;
+  filter: drop-shadow(0px 6px 55px rgba(0, 0, 0, 0.1));
+  border-radius: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.pizzaModalMain__window_form {
+  width: 458px;
+  height: 458px;
+  border-radius: 458px;
+  border: 1px dashed #A7A7A7;
+  position: relative;
+}
+.pizzaModalMain__window_img {
+  width: 372px;
+  height: 372px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+@media screen and (max-width: 1110px) {
+  .pizzaModalMain__window_form {
+    width: 348px;
+    height: 348px;
+  }
+}
+@media screen and (max-width: 890px) {
+  .pizzaForm {
+    width: 210px;
+  }
+  .pizzaForm__size {
+    width: 210px;
+  }
+  .pizzaForm__size_label {
+    width: 70px;
+    font-size: 10px;
+  }
+  .pizzaForm__size_check {
+    width: 70px;
+  }
+  .pizzaForm__type {
+    width: 210px;
+  }
+  .pizzaForm__type_label {
+    width: 105px;
+    font-size: 10px;
+  }
+  .pizzaForm__type_check {
+    width: 103px;
+  }
+  .pizzaForm__additive_articles {
+    width: 210px;
+  }
+  .pizzaForm__button {
+    width: 210px;
+    font-size: 10px;
+    height: 36px;
+  }
+  .pizzaModalMain__window_img {
+    width: 250px;
+    height: 250px;
+  }
+  .pizzaModalMain__window_form {
+    width: 300px;
+    height: 300px;
+  }
+  .closemodalMain {
+    margin: 0 15px 0 0;
+  }
+  .container-window {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+}
+@media screen and (max-width: 690px) {
+  .container-window {
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 50px 0 50px 0;
+  }
+  .pizzaModalMain__window {
+    width: -moz-max-content;
+    width: max-content;
+    flex-direction: column;
+  }
+  .pizzaForm {
+    width: 320px;
+  }
+  .pizzaForm__size {
+    width: 320px;
+  }
+  .pizzaForm__size_label {
+    width: 106px;
+    font-size: 12px;
+  }
+  .pizzaForm__size_check {
+    width: 104px;
+  }
+  .pizzaForm__type {
+    width: 320px;
+  }
+  .pizzaForm__type_label {
+    width: 157px;
+    font-size: 12px;
+  }
+  .pizzaForm__type_check {
+    width: 157px;
+  }
+  .pizzaForm__additive_articles {
+    width: 320px;
+  }
+  .pizzaForm__button {
+    width: 320px;
+    font-size: 16px;
+    height: 48px;
+  }
+  .pizzaModalMain {
+    height: 100%;
+    overflow: scroll;
+    align-items: flex-start;
+  }
+  .pizzaModalMain__window {
+    gap: 6px;
+  }
+  .pizzaModalMain__window_img {
+    width: 250px;
+    height: 250px;
+  }
+  .pizzaModalMain__window_form {
+    width: 356px;
+    height: 356px;
+  }
+  .closemodalMain {
+    margin: 15px 0 0 0;
+  }
+}
+@media screen and (max-width: 515px) {
+  .pizzaModalMain {
+    background-color: #FFF;
+    top: 100%;
+    opacity: 1;
+  }
+  .pizzaModalMain__window {
+    padding: 0;
+    filter: drop-shadow(0px 6px 55px rgba(0, 0, 0, 0));
+  }
+  .pizzaModalMain__closing {
+    position: absolute;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 16px;
+    left: 16px;
+  }
+  .pizzaModalMain__closing_img {
+    width: 20px;
+    height: 10px;
+  }
+  .closemodalMain {
+    display: none;
+  }
+  .container-window {
+    margin: 26px 0 16px 0;
+    position: relative;
+  }
+}
+@media screen and (max-width: 415px) {
+  .pizzaModalMain__window_img {
+    width: 250px;
+    height: 250px;
+  }
+  .pizzaModalMain__window_form {
+    width: 268px;
+    height: 268px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .pizzaForm {
+    width: 268px;
+  }
+  .pizzaForm__article {
+    width: 80px;
+  }
+  .pizzaForm__size {
+    width: 268px;
+  }
+  .pizzaForm__size_label {
+    width: 89px;
+    font-size: 10px;
+  }
+  .pizzaForm__size_check {
+    width: 90px;
+  }
+  .pizzaForm__type {
+    width: 268px;
+  }
+  .pizzaForm__type_label {
+    width: 134px;
+    font-size: 10px;
+  }
+  .pizzaForm__type_check {
+    width: 132px;
+  }
+  .pizzaForm__additive {
+    width: 268px;
+  }
+  .pizzaForm__additive_articles {
+    width: 268px;
+  }
+  .pizzaForm__button {
+    width: 268px;
+    font-size: 10px;
+    height: 36px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -9,20 +9,85 @@
     <script src="./script.js" type="module" defer></script>
 </head>
 <body>
-    <section class="modalMain">
+    <section class="modalMain modalMain-basic">
         <div class="container container-window">
             <div class="modalMain__window">
-                <img class="modalMain__window_img" src="./img/snacks/Dodster.png" alt="">
+                <img class="modalMain__window_img modalMain-basic__window_img" src="./img/snacks/Dodster.png" alt="">
                 <div class="modalMain__window_content">
                     <div class="modalMain__window_content_info">
-                        <p class="modalMain__window_content_info_name"></p>
-                        <p class="modalMain__window_content_info_amount"></p>
-                        <p class="modalMain__window_content_info_desc"></p>
+                        <p class="modalMain__window_content_info_name modalMain-basic__window_content_info_name"></p>
+                        <p class="modalMain__window_content_info_amount modalMain-basic__window_content_info_amount"></p>
+                        <p class="modalMain__window_content_info_desc modalMain-basic__window_content_info_desc"></p>
                     </div>
-                    <button class="modalMain__window_content_button"></button>
+                    <button class="modalMain__window_content_button modalMain-basic__window_content_button"></button>
                 </div>
             </div>
-            <img class="closemodalMain" src="./img/all/close.svg" alt="">
+            <img class="closemodalMain closemodalMain-basic" src="./img/all/close.svg" alt="">
+        </div>
+    </section>
+    <section class="pizzaModalMain">
+        <div class="container container-window">
+            <div class="pizzaModalMain__closing">
+                <img class="pizzaModalMain__closing_img" src="./img/all/Vector 3.svg" alt="">
+            </div>
+            <div class="pizzaModalMain__window">
+                <div class="pizzaModalMain__window_form">
+                    <img class="pizzaModalMain__window_img" src="./img/snacks/Dodster.png" alt="">
+                </div>
+                
+                <form class="pizzaForm">
+                    <p class="pizzaForm__title">Чиззи чеддер</p>
+                    <p class="pizzaForm__shortDesc">30 см, традиционное тесто, 480 г</p>
+                    <div class="pizzaForm__fullDesc">
+                        <!-- <p class="pizzaForm__fullDesc_basePoint">сыр чеддер,</p>
+                        <div class="pizzaForm__fullDesc_additive">
+                            <p class="pizzaForm__fullDesc_additive_point">сладкий перец</p>
+                            <img class="pizzaForm__fullDesc_additive_img" src="./img/all/pizzaModalMainDelete.svg" alt="">
+                            <p class="pizzaForm__fullDesc_additive_point_comma">,</p>
+                        </div> -->
+                    </div>
+                    <div class="pizzaForm__size">
+                        <input class="pizzaForm__size_input" id="small" type="radio" name="size">
+                        <label class="pizzaForm__size_label" for="small">Маленькая</label>
+                        <input class="pizzaForm__size_input" id="medium" type="radio" name="size">
+                        <label class="pizzaForm__size_label" for="medium">Средняя</label>
+                        <input class="pizzaForm__size_input" id="large" type="radio" name="size">
+                        <label class="pizzaForm__size_label" for="large">Большая</label>
+                        <div class="pizzaForm__size_check"></div>
+                    </div>
+                    <div class="pizzaForm__type">
+                        <input class="pizzaForm__type_input" id="tradition" type="radio" name="variety">
+                        <label class="pizzaForm__type_label" for="tradition">Традиционное</label>
+                        <input class="pizzaForm__type_input" id="thin" type="radio" name="variety">
+                        <label class="pizzaForm__type_label" for="thin">Тонкое</label>
+                        <div class="pizzaForm__type_check"></div>
+                    </div>
+                    <div class="pizzaForm__additive">
+                        <p class="pizzaForm__additive_title">Добавить в пиццу</p>
+                        <div class="pizzaForm__additive_articles">
+                            <!-- <input class="pizzaForm__article_input" type="checkbox" id="cheeseSide" name="additive">
+                            <label class="pizzaForm__article" for="cheeseSide">
+                                <img class="pizzaForm__article_check" src="./img/all/cil_check-circle.svg" alt="">
+                                <img class="pizzaForm__article_img" src="./img/pizza/additive/cheese side.png" alt="">
+                                <p class="pizzaForm__article_name">Сырный бортик</p>
+                                <p class="pizzaForm__article_price">599 ₽</p>
+                            </label>
+                            <label class="pizzaForm__article">
+                                <img class="pizzaForm__article_img" src="" alt="">
+                                <p class="pizzaForm__article_name"></p>
+                                <p class="pizzaForm__article_price"></p>
+                            </label>
+                            <label class="pizzaForm__article">
+                                <img class="pizzaForm__article_img" src="./img/pizza/additive/cheese side.png" alt="">
+                                <p class="pizzaForm__article_name">Сырный бортик</p>
+                                <p class="pizzaForm__article_price">599 ₽</p>
+                            </label> -->
+                        </div>
+                    </div>
+                    <button class="pizzaForm__button">Добавить в корзину за 625 ₽</button>
+                </form>
+            </div>
+            <img class="closemodalMain closemodalMain-pizza" src="./img/all/close.svg" alt="">
         </div>
     </section>
     <header class="header">
